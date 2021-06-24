@@ -6,7 +6,7 @@ const mysql = require("mysql");
 const db = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "Kosub2018",
+  password: "Kosub2018#",
   database: "avengers",
 });
 
@@ -19,6 +19,6 @@ db.connect((err) => {
 });
 app.use('/', require('./routes/router'))
 
-app.listen(7000, () => {
-  console.log("Server is running on LocalHost:7000");
-}); 
+app.listen(3000, () => {
+  console.log("Server is running on LocalHost:3000");
+});
