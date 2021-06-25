@@ -1,11 +1,12 @@
 import React from "react";
 import axios from "axios"
+
 export default function Home() {
   function getAllData() {
-    axios.get("/data").then((res) => {
-      mapItToLi(res.data);
-      console.log(res.data);
-    });
+    axios.get("/data").then(res => 
+      mapItToLi(res.data))
+      // console.log(res.data);
+    
   }
   function mapItToLi(arr) {
     arr.map((avenger) => {

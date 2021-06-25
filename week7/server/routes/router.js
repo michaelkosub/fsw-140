@@ -5,11 +5,12 @@ const mysql = require("mysql");
 const db = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "Kosub2018",
+  password: "password",
   database: "avengers",
 });
 
-sqlRouter.get('/data', (req, res, next) => {
+sqlRouter.get('/', (req, res, next) => {
+  // let sql= "select * from avengers"
   let sql = "SELECT DISTINCT * FROM avengers WHERE name not in('') ORDER BY name LIMIT 10;"
   db.query(sql, (err, result)=> {
     if(err){
